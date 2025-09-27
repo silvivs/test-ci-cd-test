@@ -1,0 +1,30 @@
+name: CI/CD do Projeto
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16' # Altere para a versão do Node.js que você usa
+
+      - name: Instalar dependências
+        run: npm ci # ou npm install, dependendo do seu projeto
+
+      - name: Executar testes
+        run: npm test # ou o comando para rodar seus testes
