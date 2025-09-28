@@ -24,7 +24,7 @@ jobs:
           node-version: '16' # Altere para a versão do Node.js que você usa
 
       - name: Instalar dependências
-        run: npm ci # ou npm install, dependendo do seu projeto
+        run: pip install -r requirements.txt
 
       - name: Executar testes
-        run: ls -la # ou o comando para rodar seus testes
+        run: ls -la 
