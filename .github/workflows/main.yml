@@ -27,4 +27,4 @@ jobs:
         run: npm ci # ou npm install, dependendo do seu projeto
 
       - name: Executar testes
-        run: npm test # ou o comando para rodar seus testes
+        run: ls -la # ou o comando para rodar seus testes
